@@ -1,5 +1,6 @@
 [Unit]
 Description=Lock the screen on resume from suspend
+Before=sleep.target suspend.target
 
 [Service]
 User=hjolli
@@ -10,4 +11,3 @@ ExecStart=/usr/bin/i3lock -i /home/hjolli/Pictures/Backgrounds/i3back.png
 
 [Install]
 WantedBy=sleep.target suspend.target
-Before=sleep.target suspend.target
