@@ -1,0 +1,13 @@
+[Unit]
+Description=Lock the screen on resume from suspend
+
+[Service]
+User=hjolli
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/i3lock -i /home/hjolli/Pictures/Backgrounds/i3back.png
+#ExecStart=/home/hjolli/bin/xkcd-lock
+
+[Install]
+WantedBy=sleep.target suspend.target
+Before=sleep.target suspend.target
